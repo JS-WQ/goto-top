@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>回到顶部</title>
+    <style>
+        #kk{
+            position: fixed;
+            bottom: 40px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id=kk>回到顶部</button>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <p>这是一段话</p>
+    <script>
+        var Obtn=document.getElementById('kk')
+        Obtn.onclick=function(){
+            
+            var time=setInterval(function(){
+                var scheight=window.scrollY
+                if(scheight==0){
+                    clearInterval(time)
+                    console.log(scheight)
+                }                
+                window.scrollTo(0,scheight/3)
+                
+            },500)
+        }
+    </script>
+</body>
+</html>
