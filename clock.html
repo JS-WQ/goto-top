@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时钟</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background:radial-gradient(circle,#D2D1CB,#BEBCB7,#8A8582)
+        }
+        #page{
+           
+        }
+        #box{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;           
+        }
+        #clock{
+            width: 300px;
+            height: 300px;
+            border-radius: 23px;
+            background: #343434;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 4px 10px 53px 12px #7d7b79;
+        }
+        #number{
+            width: 260px;
+            height: 260px;
+            border-radius: 200px;
+            background: #ededed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        #number div{
+            display: block;
+            width:220px;
+            height:20px;
+            line-height:20px;
+            position:absolute;
+            left:20px;
+            top:120px;
+            }
+        #number span{
+            display:block;
+            width:20px;
+            height:20px;
+            line-height:20px;
+            font-size: 20px;
+            font-family: "微软雅黑";
+        }
+        #center{
+            width: 105px;
+            height: 105px;
+            background:radial-gradient(#f8f4f4,#dbd7d7,#cecbcb);
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #center #litter{
+            width: 20px;
+            height: 20px;
+            background:#ffffff;
+            border-radius: 20px;
+            display: flex;      
+            justify-content: center;
+            align-items: center;     
+            z-index: 2;
+        }
+        #center #litter #ring{
+            width: 8px;
+            height: 8px;
+            border: 3px solid red;
+            border-radius: 8px;
+        }
+        #number .hour{
+            width: 8px;
+            height: 70px;
+            position: absolute;
+            background:#080606;
+            transform-origin: 35% 100%;  
+   
+            left: 127px;
+            top: 61px;
+            border-radius: 4px;
+        }
+        #number .minute{
+            width: 4px;
+            height: 80px;
+            position: absolute;
+            background: #080606;
+            border-radius: 2px;
+            transform-origin: 5% 100%;            
+            left: 129px;
+            top: 51px;
+        }
+        #number .second{
+            width: 1px;
+            height: 92px;
+            position: absolute;
+            background: #e12117;
+            border-radius: 2px;
+            transform-origin: 0% 80%;   
+       
+            left: 130px;
+            top: 57px;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div id="box">
+            <div id="clock">
+                <div id="number">                  
+                    <div><span>9</span></div>
+                    <div><span>10</span></div>
+                    <div><span>11</span></div>
+                    <div><span>12</span></div>
+                    <div><span>1</span></div>
+                    <div><span>2</span></div>
+                    <div><span>3</span></div>
+                    <div><span>4</span></div>
+                    <div><span>5</span></div>
+                    <div><span>6</span></div>
+                    <div><span>7</span></div>
+                    <div><span>8</span></div>
+                    <p id="center">
+                        <span id="litter">
+                            <span id="ring"></span>
+                        </span>
+                    </p>
+                    <div class="hour"></div>
+                    <div class="minute"></div>
+                    <div class="second"></div>
+                </div>                                        
+            </div>
+        </div>
+    </div>
+    <script>
+        var Onumb=document.getElementById('number')
+        var Odiv=Onumb.getElementsByTagName('div')
+        var Ospan=Onumb.getElementsByTagName('span')
+        var Odiv2=document.getElementById('center')        
+        var oHour = document.querySelector('.hour')
+        var oMin = document.querySelector('.minute')
+        var oSec = document.querySelector('.second')
+
+        for(var i=0;i<Odiv.length;i++){
+            Odiv[i].style.WebkitTransform="rotate(" + i * 30 + "deg)";
+        }    
+        for(var j=0;j<Ospan.length;j++){
+            Ospan[j].style.WebkitTransform="rotate("+ j * -30 + "deg)";
+        }
+               
+        function time(){
+        var date = new Date()
+        var h = date.getHours()
+        var m = date.getMinutes()
+        var s = date.getSeconds()
+
+        oHour.style.transform = "rotate("+(h+m/60)*30+"deg)"
+        oMin.style.transform = "rotate("+(m+s/60)*6+"deg)"
+        oSec.style.transform = "rotate("+s*6+"deg)"   
+        }
+        //time()
+        //setInterval(time,1000)
+    </script>
+</body>
+</html>
